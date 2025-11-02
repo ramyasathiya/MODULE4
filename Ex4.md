@@ -1,41 +1,44 @@
 ## Ex.No:4
-## Ex.Name: Write a program in C++ to compute quotient and remainder using class methods(define methods outside class)
+## Ex.Name: Write a CPP program to demonstrate the this pointer.
 ## Date:
 ## Aim:
-To write a C++ program to compute the quotient and remainder using class methods defined outside the class.
+To write a C++ program that demonstrates the use of the this pointer.
 
 ## Algorithm:
 1. Start the program.
-2. Define a class Division with two member functions: -computeQuotient(int a, int b) -computeRemainder(int a, int b)
-3. Declare these functions inside the class but define them outside using scope resolution ::.
-4. In the main() function, read two integers from the user (dividend and divisor).
-5. Call the methods using the class object to compute quotient and remainder.
-6. Display the results.
-7. End the program.
+2. Define a class Student with private members name and marks.
+3. Use a constructor where the this pointer is used to differentiate between class members and parameters with the same name.
+4. Define a method display() to print the student details using the this pointer.
+5. In main(), create objects of Student and display their details.
+6. End the program.
+   
 ## Program:
 ```
 #include <iostream>
 using namespace std;
-class view{
-    public:
-    void remain(int a,int b);
+class Test {
+    int x;
+public:
+    void setX(int x) {
+        this->x = x; 
+    }
+    void display() {
+        cout << "x = " << x << endl;
+    }
 };
-void view::remain(int a,int b)
-{
-    cout<<"The quotient of the division is:"<<a/b<<endl;
-    cout<<"The remainder of the division is:"<<a%b;
-}
-int main()
-{
-    int a,b;
-    cin>>a>>b;
-    view v;
-    v.remain(a,b);
+int main() {
+    Test obj;
+    int value;
+    cin >> value;
+    obj.setX(value);
+    obj.display();
+    return 0;
 }
 ```
 ## Output:
-<img width="621" height="252" alt="image" src="https://github.com/user-attachments/assets/2df35cc0-7335-4fa2-a27e-34cd3e60c562" />
+
+<img width="350" height="212" alt="image" src="https://github.com/user-attachments/assets/68731f98-4b3f-4304-9a65-d1fa6e35a30b" />
 
 
 ## Result:
-The program successfully computes the quotient and remainder using class methods defined outside the class in C++.
+The program successfully demonstrates the this pointer by using it to distinguish class members from constructor parameters and by accessing object data inside member functions.
