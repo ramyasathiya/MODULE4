@@ -1,8 +1,10 @@
 ## Ex.No:1
 ## Ex.Name: Write a CPP Program for Class conversion that can be achieved by conversion function which is done by the use of operator overloading (use character data)
-## Date:
+## Date: 01.09.25
 ## Aim:
 To write a C++ program that demonstrates class conversion into a basic data type (character) using operator overloading.
+## Name : Ramya S
+## Register Number : 212222040130
 
 ## Algorithm:
 1. Start the program.
